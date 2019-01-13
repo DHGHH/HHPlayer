@@ -27,7 +27,19 @@
         </activity>
 
         <activity
+            android:label="VideoPlayerActivity"
             android:name=".video.VideoPlayerActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:label="TextureActivity"
+            android:name=".video.VideoPlayerTextureActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
